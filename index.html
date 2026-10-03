@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrovas Animal Nutrition Ltd — Feed &amp; Farm Solutions in Bulenga</title>
+<meta name="description" content="Agrovas Animal Nutrition Ltd supplies layer, broiler and pig feed, concentrates and farm nutrition advice from Wilson Plaza, Mityana Road, Bulenga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #002452;
+    --navy-deep: #001633;
+    --orange: #f4630c;
+    --orange-light: #ff8a3d;
+    --white: #ffffff;
+    --paper: #f5f7fa;
+    --ink: #1a2233;
+    --ink-soft: #5b6472;
+    --line: rgba(0,36,82,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    color:var(--navy);
+    margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px;}
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--navy);
+    border-bottom:3px solid var(--orange);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 32px;max-width:1140px;margin:0 auto;
+    gap:24px;
+  }
+  .brand-logo{height:52px;flex-shrink:0;}
+  nav.links{display:flex;gap:28px;font-size:0.95rem;}
+  nav.links a{text-decoration:none;color:#cfe0f5;border-bottom:2px solid transparent;padding-bottom:3px;font-weight:500;}
+  nav.links a:hover{border-color:var(--orange);color:var(--white);}
+  .call-btn{
+    background:var(--orange);color:var(--white);
+    padding:11px 22px;border-radius:4px;text-decoration:none;
+    font-size:0.92rem;font-weight:700;white-space:nowrap;
+  }
+  .call-btn:hover{background:var(--orange-light);}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:var(--white);
+    padding:64px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+  }
+  .badge-row{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(244,99,12,0.16);border:1px solid var(--orange);
+    color:var(--orange-light);font-size:0.85rem;font-weight:600;
+    padding:6px 14px;border-radius:100px;margin-bottom:22px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    line-height:1.15;
+  }
+  .hero h1 span{color:var(--orange-light);}
+  .hero p.lead{
+    margin-top:18px;font-size:1.08rem;color:#cfe0f5;max-width:480px;
+  }
+  .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--orange);color:var(--white);
+    padding:14px 26px;border-radius:5px;text-decoration:none;
+    font-weight:700;font-size:0.98rem;
+  }
+  .btn-primary:hover{background:var(--orange-light);}
+  .btn-ghost{
+    border:1.5px solid rgba(255,255,255,0.4);color:var(--white);
+    padding:13px 26px;border-radius:5px;text-decoration:none;font-size:0.98rem;font-weight:600;
+  }
+  .btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,0.06);}
+  .hero-banner-img{width:100%;border-radius:10px 10px 0 0;display:block;}
+
+  /* TICKER STRIP */
+  .strip{
+    background:var(--orange);color:var(--white);
+    padding:12px 0;font-size:0.92rem;font-weight:600;
+  }
+  .strip .wrap{display:flex;gap:36px;flex-wrap:wrap;justify-content:center;}
+  .strip span{display:flex;align-items:center;gap:8px;}
+
+  /* SECTION GENERIC */
+  section{padding:72px 0;}
+  .section-head{max-width:600px;margin:0 auto 44px;text-align:center;}
+  .kicker{color:var(--orange);font-size:0.88rem;margin-bottom:8px;font-weight:700;letter-spacing:0.02em;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.15rem);}
+  .section-head p{color:var(--ink-soft);margin-top:12px;font-size:1rem;}
+
+  /* PRODUCTS */
+  .products{background:var(--paper);}
+  .product-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+  }
+  .product-card{
+    background:var(--white);border-radius:10px;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(0,36,82,0.06);
+    display:flex;flex-direction:column;
+  }
+  .product-card img{width:100%;height:auto;}
+  .product-card .pc-body{padding:20px 20px 22px;flex:1;display:flex;flex-direction:column;}
+  .product-card .tag{
+    color:var(--orange);font-size:0.78rem;margin-bottom:6px;
+    font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
+  }
+  .product-card h3{color:var(--navy);font-size:1.1rem;margin-bottom:8px;}
+  .product-card p{color:var(--ink-soft);font-size:0.9rem;margin:0 0 14px;flex:1;}
+  .price-row{
+    display:flex;align-items:baseline;justify-content:space-between;
+    border-top:1px dashed var(--line);padding-top:12px;
+  }
+  .price-row .price{font-family:'Poppins',sans-serif;font-weight:700;color:var(--navy);font-size:1.15rem;}
+  .price-row .unit{font-size:0.82rem;color:var(--ink-soft);}
+
+  /* TIERED PRICE LIST (inside a product card, e.g. LFL pellets) */
+  .tier-list{list-style:none;padding:0;margin:0 0 14px;border-top:1px dashed var(--line);}
+  .tier-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:7px 0;border-bottom:1px solid var(--line);font-size:0.88rem;
+  }
+  .tier-list b{color:var(--navy);font-weight:700;}
+  .tier-list span.stage{color:var(--ink-soft);}
+
+  /* ADDITIVES + DAY-OLD CHICKS */
+  .sub-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px;
+  }
+  .sub-card{
+    background:var(--white);border-radius:10px;border:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(0,36,82,0.06);padding:24px 26px;
+  }
+  .sub-card h3{color:var(--navy);font-size:1.02rem;margin-bottom:14px;}
+  .additive-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .additive-tags span{
+    background:rgba(244,99,12,0.09);color:var(--navy);border:1px solid var(--line);
+    font-size:0.85rem;font-weight:600;padding:6px 13px;border-radius:100px;
+  }
+  .sub-card .note{font-size:0.85rem;color:var(--ink-soft);margin:0;}
+  .chick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .chick-item img{border-radius:8px;height:90px;width:100%;object-fit:cover;}
+  .chick-item span{display:block;text-align:center;font-size:0.85rem;font-weight:600;color:var(--navy);margin-top:6px;}
+
+  /* FORMULAS / MIXING GUIDES */
+  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .guide-card{
+    background:var(--white);border-radius:10px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 2px 10px rgba(0,36,82,0.06);
+    display:flex;flex-direction:column;
+  }
+  .guide-card a.thumb{display:block;}
+  .guide-card img{width:100%;height:auto;border-bottom:1px solid var(--line);}
+  .guide-card .gc-body{padding:18px 20px 22px;}
+  .guide-card h3{color:var(--navy);font-size:1.05rem;margin-bottom:8px;}
+  .guide-card p{color:var(--ink-soft);font-size:0.9rem;margin:0 0 14px;}
+  .guide-card .open-link{
+    color:var(--orange);font-weight:700;font-size:0.88rem;text-decoration:none;
+  }
+  .guide-card .open-link:hover{text-decoration:underline;}
+  .guide-note{text-align:center;color:var(--ink-soft);font-size:0.9rem;margin-top:30px;}
+
+  /* WHY / SERVICES */
+  .why{background:var(--navy);color:var(--white);}
+  .why .kicker{color:var(--orange-light);}
+  .why .section-head h2{color:var(--white);}
+  .why .section-head p{color:#cfe0f5;}
+  .why-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  .why-item{
+    background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);
+    border-radius:8px;padding:26px 22px;
+  }
+  .why-item .ic{color:var(--orange-light);margin-bottom:14px;}
+  .why-item h3{color:var(--white);font-size:1.02rem;margin-bottom:8px;}
+  .why-item p{color:#b9caea;font-size:0.9rem;margin:0;}
+
+  /* VISIT / CONTACT */
+  .visit{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:0;
+    background:var(--paper);border-radius:12px;overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .visit-info{padding:52px 44px;}
+  .visit-info h2{font-size:1.8rem;margin-bottom:22px;}
+  .contact-row{
+    display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);
+  }
+  .contact-row:last-of-type{border-bottom:1px solid var(--line);}
+  .contact-row .ic{color:var(--orange);flex-shrink:0;margin-top:2px;}
+  .contact-row b{display:block;font-size:0.95rem;color:var(--navy);}
+  .contact-row span{font-size:0.9rem;color:var(--ink-soft);}
+  .visit-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .visit-map{min-height:320px;}
+  .visit-map iframe{width:100%;height:100%;border:0;min-height:320px;}
+
+  /* FOOTER */
+  footer{
+    background:var(--navy-deep);color:#9fb3d1;padding:36px 0 28px;
+  }
+  .foot-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:16px;
+  }
+  .foot-inner img{height:34px;}
+  footer small{font-size:0.85rem;}
+
+  @media (max-width: 900px){
+    nav.links{display:none;}
+    .hero-inner{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:1fr 1fr;}
+    .sub-row{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .visit{grid-template-columns:1fr;}
+    .visit-info{padding:36px 24px;}
+    section{padding:52px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <img class="brand-logo" src="images/header-banner.jpg" alt="Agrovas Animal Nutrition Ltd">
+    <nav class="links">
+      <a href="#products">Products</a>
+      <a href="#formulas">Mixing guides</a>
+      <a href="#why">Why us</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call-btn" href="tel:+256746136834">Call 0746 136 834</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="badge-row">Wilson Plaza, Bulenga — on Mityana Road after Sseguya Stage</div>
+      <h1>Quality feed, <span>your farm solutions.</span></h1>
+      <p class="lead">Agrovas Animal Nutrition Ltd supplies layer, broiler and pig feed, LFL pellets, additives, day-old chicks and mixing guides built with European quality materials — plus the technical guidance to use them right.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="tel:+256746136834">Call for stock &amp; prices</a>
+        <a class="btn-ghost" href="#products">See our products</a>
+      </div>
+    </div>
+    <div>
+      <img class="hero-banner-img" src="images/header-banner.jpg" alt="Agrovas Animal Nutrition Ltd — poultry and pig farming">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span>📞 0746 136 834</span>
+    <span>✉️ agrovaskd25@gmail.com</span>
+    <span>📍 Wilson Plaza, Mityana Road, Bulenga</span>
+  </div>
+</div>
+
+<section id="products" class="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Our products</div>
+      <h2>Feed packs, priced and ready.</h2>
+      <p>25kg and 12kg packs formulated with European quality materials. Call ahead to confirm current stock.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/layer-pack.jpg" alt="Agrovas Layer Pack 2.5%, 25kg bag">
+        <div class="pc-body">
+          <div class="tag">Poultry — layers</div>
+          <h3>Agrovas Layer Pack 2.5%</h3>
+          <p>For egg production. A good quality product formulated and produced with European quality materials.</p>
+          <div class="price-row">
+            <span class="price">UGX 160,000</span>
+            <span class="unit">25kg bag</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/broiler-pack.jpg" alt="Agrovas Broiler Pack 2.5%, 25kg bag">
+        <div class="pc-body">
+          <div class="tag">Poultry — broilers</div>
+          <h3>Agrovas Broiler Pack 2.5%</h3>
+          <p>Starter/grower formulation for broilers, produced with European quality materials.</p>
+          <div class="price-row">
+            <span class="price">UGX 210,000</span>
+            <span class="unit">25kg bag</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/agropig-pack.jpg" alt="Agropig 12%, 12kg bag">
+        <div class="pc-body">
+          <div class="tag">Pigs</div>
+          <h3>Agropig 12%</h3>
+          <p>For fattening and growing pigs. Use as guided by the nutritionists.</p>
+          <div class="price-row">
+            <span class="price">UGX 40,000</span>
+            <span class="unit">12kg bag</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/lfl-broiler-pellets.jpg" alt="LFL Broiler Pellet Feeds bag">
+        <div class="pc-body">
+          <div class="tag">Poultry — pellets</div>
+          <h3>LFL Broiler Pellet Feeds</h3>
+          <ul class="tier-list">
+            <li><span class="stage">Pre-Starter</span><b>UGX 175,000</b></li>
+            <li><span class="stage">Starter</span><b>UGX 150,000</b></li>
+            <li><span class="stage">Grower</span><b>UGX 140,000</b></li>
+            <li><span class="stage">Finisher</span><b>UGX 135,000</b></li>
+          </ul>
+          <p style="margin:0;font-size:0.82rem;">Ready-mixed pellets, by LFL (U)anda Ltd — stage pricing per bag.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-row">
+      <div class="sub-card">
+        <h3>Feed additives available</h3>
+        <div class="additive-tags">
+          <span>Methionine</span>
+          <span>Lysine</span>
+          <span>DCP</span>
+          <span>Acidifiers</span>
+          <span>Lime — granular &amp; powder</span>
+        </div>
+        <p class="note">Call or visit the store for current pricing on additives.</p>
+      </div>
+      <div class="sub-card">
+        <h3>Day-old chicks</h3>
+        <div class="chick-grid">
+          <div class="chick-item">
+            <img src="images/day-old-broilers.jpg" alt="Day-old broiler chicks">
+            <span>Broilers</span>
+          </div>
+          <div class="chick-item">
+            <img src="images/day-old-layers.jpg" alt="Day-old layer chicks">
+            <span>Layers</span>
+          </div>
+        </div>
+        <p class="note" style="margin-top:12px;">Call ahead for current availability and pricing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Mix it yourself</div>
+      <h2>Full feed mixing guides, free with every pack.</h2>
+      <p>Complete life-cycle formulas for layers, broilers and pigs — scale any batch size proportionally, and always use as guided by your nutritionist.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <a class="thumb" href="images/formula-guide-layers.jpg" target="_blank" rel="noopener">
+          <img src="images/formula-guide-layers.jpg" alt="Layers feed formulation guide, full life-cycle mixing chart">
+        </a>
+        <div class="gc-body">
+          <h3>Layers Feed Formulation Guide</h3>
+          <p>Pre-starter through off-lay (46+ weeks), built around Agrovas Layer Pack 2.5%.</p>
+          <a class="open-link" href="images/formula-guide-layers.jpg" target="_blank" rel="noopener">View full guide →</a>
+        </div>
+      </div>
+      <div class="guide-card">
+        <a class="thumb" href="images/formula-guide-broiler.jpg" target="_blank" rel="noopener">
+          <img src="images/formula-guide-broiler.jpg" alt="Broiler feed formulation guide, mixing chart">
+        </a>
+        <div class="gc-body">
+          <h3>Broiler Feed Formulation Guide</h3>
+          <p>Pre-starter, starter, grower and finisher stages, built around Agrovas Broiler Pack 2.5%.</p>
+          <a class="open-link" href="images/formula-guide-broiler.jpg" target="_blank" rel="noopener">View full guide →</a>
+        </div>
+      </div>
+      <div class="guide-card">
+        <a class="thumb" href="images/formula-guide-pig.jpg" target="_blank" rel="noopener">
+          <img src="images/formula-guide-pig.jpg" alt="Pig feed formulation guide, mixing chart">
+        </a>
+        <div class="gc-body">
+          <h3>Pig Feed Formulation Guide</h3>
+          <p>Fattening and grower mixing ratios per 100kg batch, built around Agropig 12%.</p>
+          <a class="open-link" href="images/formula-guide-pig.jpg" target="_blank" rel="noopener">View full guide →</a>
+        </div>
+      </div>
+    </div>
+    <p class="guide-note">Tap any guide to open it full-size — save it, print it, or zoom in on your phone.</p>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why farmers choose us</div>
+      <h2>Feed backed by farm know-how.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h3>Reliable stock</h3>
+        <p>Layer, broiler and pig feed kept in supply at Wilson Plaza.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
+        <h3>Mixing formulas</h3>
+        <p>Exact formulas shared so you can mix on-farm with confidence.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div>
+        <h3>European quality</h3>
+        <p>Formulated and produced with European quality materials.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg></div>
+        <h3>Talk to a nutritionist</h3>
+        <p>Guided use recommended and support available by phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="visit">
+      <div class="visit-info">
+        <div class="kicker">Visit the store</div>
+        <h2>Come talk feed with us.</h2>
+        <div class="contact-row">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <div><b>Wilson Plaza, Mityana Road</b><span>Bulenga, after Sseguya Stage</span></div>
+        </div>
+        <div class="contact-row">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg></span>
+          <div><b>0746 136 834</b><span>Call for current stock &amp; prices</span></div>
+        </div>
+        <div class="contact-row">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
+          <div><b>agrovaskd25@gmail.com</b><span>Email us anytime</span></div>
+        </div>
+        <div class="visit-cta">
+          <a class="btn-primary" href="tel:+256746136834">Call now</a>
+          <a class="btn-ghost" style="color:var(--navy);border-color:var(--navy);" href="https://www.google.com/maps/search/?api=1&query=Agrovas+Animal+Nutrition+Ltd+Bulenga" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="visit-map">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Agrovas+Animal+Nutrition+Ltd,+Mityana+Rd,+Bulenga&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <img src="images/header-banner.jpg" alt="Agrovas Animal Nutrition Ltd">
+    <small>Wilson Plaza, Mityana Road, Bulenga · 0746 136 834 · agrovaskd25@gmail.com</small>
+  </div>
+</footer>
+
+</body>
+</html>
